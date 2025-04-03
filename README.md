@@ -161,6 +161,9 @@ public class AlarmReceiver extends BroadcastReceiver {
             List<ResolveInfo> apps = pm.queryIntentActivities(mainIntent, 0);
             
             for (ResolveInfo info : apps) {
+    if (appName.equals(info.loadLabel(pm).toString())) {
+    }
+}
                 if (appName.equals(info.loadLabel(pm).toString())) {
                     Intent launchIntent = pm.getLaunchIntentForPackage(info.activityInfo.packageName);
                     if (launchIntent != null) {
