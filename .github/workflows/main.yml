@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         new AlertDialog.Builder(this)
             .setTitle(R.string.select_language)
             .setItems(R.array.languages_array, (dialog, which) -> {
-                String language = (which == 0) ? "en" : "ar";
+                String language = (which == 0) ? "en" : "ar" ;
                 sharedPreferences.edit().putString(LANGUAGE_KEY, language).apply();
                 recreate();
             }).show();
